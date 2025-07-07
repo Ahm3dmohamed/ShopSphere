@@ -1,0 +1,53 @@
+name: e_comerce_app
+description: "A new Flutter project."
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.1 <4.0.0'
+
+dependencies:
+  bloc: ^9.0.0
+  cached_network_image: ^3.4.1
+  cupertino_icons: ^1.0.6
+  dio: ^5.8.0+1
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^9.1.1
+  flutter_native_splash: ^2.4.0
+  google_fonts: ^6.2.1
+  shared_preferences: ^2.5.3
+  smooth_page_indicator: ^1.1.0
+
+dev_dependencies:
+  flutter_lints: ^3.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  # Uncomment and add your assets here:
+  assets:
+    - assets/img/
+  # Uncomment and add your custom fonts here:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+flutter_native_splash:
+  color: "#048c2c"
+  image: assets/img/splash_Screen.jpg
+
+  android_12:
+    image: assets/img/splash_Screen.jpg
+    color: "#048c2c"
