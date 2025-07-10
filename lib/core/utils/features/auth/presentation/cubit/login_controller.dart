@@ -1,3 +1,4 @@
+import 'package:e_comerce_app/core/utils/features/tabs/home/presentation/main_layout_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rive/rive.dart';
@@ -117,6 +118,10 @@ class LoginController {
               usernameController.text.trim(),
               passwordController.text.trim(),
             );
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (_) => MainLayoutPage()),
+        );
       } else {
         addFailController();
       }

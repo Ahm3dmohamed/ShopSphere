@@ -1,11 +1,15 @@
+import 'package:dio/dio.dart';
 import 'package:e_comerce_app/core/config/size_config.dart';
+import 'package:e_comerce_app/core/utils/features/auth/presentation/cubit/sign_up_cubit.dart';
 import 'package:e_comerce_app/core/utils/features/auth/presentation/login_page.dart';
+import 'package:e_comerce_app/core/utils/features/auth/presentation/sign_up_page.dart';
 import 'package:e_comerce_app/core/utils/features/on_board/widgets/on_board_one.dart';
 import 'package:e_comerce_app/core/utils/features/on_board/widgets/on_board_three.dart';
 import 'package:e_comerce_app/core/utils/features/on_board/widgets/on_board_two.dart';
 import 'package:e_comerce_app/core/utils/features/tabs/home/presentation/main_layout_page.dart';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoard extends StatefulWidget {
@@ -61,10 +65,16 @@ class _OnBoardState extends State<OnBoard> {
                 _onLastPage
                     ? GestureDetector(
                         onTap: () {
-                          Navigator.pushReplacement(context,
-                              MaterialPageRoute(builder: (context) {
-                            return LoginPage();
-                          }));
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (outerContext) {
+                                return BlocProvider(
+                                  create: (_) => SignupCubit(dio: Dio()),
+                                  child: const SignupPage(),
+                                );
+                              },
+                            ),
+                          );
                         },
                         child: const Text(
                           "Done",
