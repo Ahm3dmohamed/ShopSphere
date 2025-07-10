@@ -1,4 +1,5 @@
-import 'package:e_comerce_app/widgets/btn_navigate_bar.dart';
+import 'package:e_comerce_app/core/utils/features/on_board/on_board.dart';
+import 'package:e_comerce_app/core/utils/features/tabs/home/presentation/main_layout_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: BtnNavigateBar(),
+      home: OnBoard(),
     );
   }
 }

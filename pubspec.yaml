@@ -18,6 +18,7 @@ dependencies:
   flutter_bloc: ^9.1.1
   flutter_native_splash: ^2.4.0
   google_fonts: ^6.2.1
+  rive: ^0.13.20
   shared_preferences: ^2.5.3
   smooth_page_indicator: ^1.1.0
 
@@ -32,6 +33,7 @@ flutter:
   # Uncomment and add your assets here:
   assets:
     - assets/img/
+    - assets/icon/
   # Uncomment and add your custom fonts here:
   # fonts:
   #   - family: Schyler
